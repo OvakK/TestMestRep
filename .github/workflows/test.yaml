@@ -25,8 +25,16 @@ jobs:
   
   admin_job:
     needs: changes
-    if: ${{ needs.changes.outputs.admin == 'true' }}  || ${{ needs.changes.outputs.api == 'true' }}
+    if: ${{ needs.changes.outputs.admin == 'true' }}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
       run : echo "TEST" 
+      
+  api_job:
+    needs: changes
+    if: ${{ needs.changes.outputs.api == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      run : echo "TEST2" 
