@@ -1,0 +1,32 @@
+name: Build infra
+
+on:
+  push:
+
+jobs:
+
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      src: ${{ steps.changes.outputs.src }}
+      infra: ${{ steps.changes.outputs.infra }}
+    steps:
+    - uses: actions/checkout@v3
+    - uses: dorny/paths-filter@v2
+      id: changes
+      with:
+        filters: |
+          admin:
+            - 'admin/**'
+          api:
+            - 'api/**'
+
+           
+  
+  admin_job:
+    needs: changes
+    if: ${{ needs.changes.outputs.admin == 'true' }}  || ${{ needs.changes.outputs.api == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      run : echo "TEST" 
