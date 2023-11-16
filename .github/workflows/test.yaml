@@ -25,7 +25,7 @@ jobs:
   
   admin_job:
     needs: changes
-    if: ${{ needs.changes.outputs.admin == 'true' }}
+    if: ${{ needs.changes.outputs = ["admin"] }}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
