@@ -33,7 +33,7 @@ jobs:
       
   api_job:
     needs: changes
-    if: ${{ needs.changes.outputs.api == 'true' }}
+    if: ${{ needs.changes.outputs.infra == 'true' }}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
