@@ -17,7 +17,7 @@ jobs:
       with:
         filters: |
           admin:
-            - '/**'
+            - './**'
           api:
             - 'api/**'
 
