@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       src: ${{ steps.changes.outputs.admin }}
-      infra: ${{ steps.changes.outputs.infra }}
+      api: ${{ steps.changes.outputs.api }}
     steps:
     - uses: actions/checkout@v3
     - uses: dorny/paths-filter@v2
@@ -33,7 +33,7 @@ jobs:
       
   api_job:
     needs: changes
-    if: ${{ needs.changes.outputs.infra == 'true' }}
+    if: ${{ needs.changes.outputs.api == 'true' }}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
