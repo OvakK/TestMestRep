@@ -5,36 +5,47 @@ on:
 
 jobs:
 
-  changes:
-    runs-on: ubuntu-latest
-    outputs:
-      src: ${{ steps.changes.outputs.admin }}
-      api: ${{ steps.changes.outputs.api }}
-    steps:
-    - uses: actions/checkout@v3
-    - uses: dorny/paths-filter@v2
-      id: changes
-      with:
-        filters: |
-          admin:
-            - '.github/workflows/**'
-          api:
-            - 'api/**'
+  # changes:
+  #   runs-on: ubuntu-latest
+  #   outputs:
+  #     src: ${{ steps.changes.outputs.admin }}
+  #     api: ${{ steps.changes.outputs.api }}
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - uses: dorny/paths-filter@v2
+  #     id: changes
+  #     with:
+  #       filters: |
+  #         admin:
+  #           - '.github/workflows/**'
+  #         api:
+  #           - 'api/**'
 
            
   
-  admin_job:
-    needs: changes
-    if: needs.changes.outputs.src == 'true'
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      run : echo "TEST12" 
+  # admin_job:
+  #   needs: changes
+  #   if: needs.changes.outputs.src == 'true'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Check out code
+  #     run : echo "TEST12" 
       
-  api_job:
-    needs: changes
-    if: ${{ needs.changes.outputs.api == 'true' }}
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      run : echo "TEST2" 
+  # api_job:
+  #   needs: changes
+  #   if: ${{ needs.changes.outputs.api == 'true' }}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Check out code
+  #     run : echo "TEST2" 
+    aws:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: AWS
+        run : |
+             latest_tag=$(jq -r '.imageDetails[0].imageTags[0]' aws.json)
+             export LATEST_IMAGE_TAG=$latest_tag
+             echo $LATEST_IMAGE_TAG
