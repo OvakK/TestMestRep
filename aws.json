@@ -1,0 +1,107 @@
+{
+    "imageDetails": [
+        {
+            "registryId": "***",
+            "repositoryName": "test-ecr-repository",
+            "imageDigest": "sha256:17532fea95261c31138457bda6d9b92b2784f106b330a4428f6097084f7993f4",
+            "imageTags": [
+                "api_82aa556ecfa535db2c4e279f40113d5fa659a93e"
+            ],
+            "imageSizeInBytes": 644397507,
+            "imagePushedAt": "2023-11-16T14:32:05+00:00",
+            "imageManifestMediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "artifactMediaType": "application/vnd.docker.container.image.v1+json",
+            "lastRecordedPullTime": "2023-11-16T14:52:54.733000+00:00"
+        },
+        {
+            "registryId": "***",
+            "repositoryName": "test-ecr-repository",
+            "imageDigest": "sha256:d5c939f0f38429d2f910e8a4151098a44f0e1f66e0a027fa1a205dc4bbe69244",
+            "imageTags": [
+                "api_47a7340a2786c26c743f969e808e182e47fe2a0f"
+            ],
+            "imageSizeInBytes": 470581899,
+            "imagePushedAt": "2023-11-17T08:21:25+00:00",
+            "imageManifestMediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "artifactMediaType": "application/vnd.docker.container.image.v1+json",
+            "lastRecordedPullTime": "2023-11-17T08:21:25.860000+00:00"
+        },
+        {
+            "registryId": "***",
+            "repositoryName": "test-ecr-repository",
+            "imageDigest": "sha256:d2aa045cb7e1f498541c4255f5d2b7fd5da9f4118b530b91da4982ab4ab25925",
+            "imageTags": [
+                "api_688a94eefec885d1d01831a3eeccec11e8994d55"
+            ],
+            "imageSizeInBytes": 644389358,
+            "imagePushedAt": "2023-11-16T14:06:25+00:00",
+            "imageManifestMediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "artifactMediaType": "application/vnd.docker.container.image.v1+json"
+        },
+        {
+            "registryId": "***",
+            "repositoryName": "test-ecr-repository",
+            "imageDigest": "sha256:c0ca177b5731c727355b4535aa77db51f6407efd1a6246e4a3b8c9d0a906f118",
+            "imageTags": [
+                "api_29013b9bd5e8c2b2c3fa34f23d329953208fdfa2"
+            ],
+            "imageSizeInBytes": 644394850,
+            "imagePushedAt": "2023-11-16T15:30:00+00:00",
+            "imageManifestMediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "artifactMediaType": "application/vnd.docker.container.image.v1+json",
+            "lastRecordedPullTime": "2023-11-17T08:15:31.098000+00:00"
+        },
+        {
+            "registryId": "***",
+            "repositoryName": "test-ecr-repository",
+            "imageDigest": "sha256:9504f3f64a3f16f0eaf9adca3542ff8b2a6880e6abfb13e478cca23f6380080a",
+            "imageTags": [
+                "1.0.0"
+            ],
+            "imageSizeInBytes": 70475914,
+            "imagePushedAt": "2023-09-13T07:52:56+00:00",
+            "imageScanStatus": {
+                "status": "COMPLETE",
+                "description": "The scan was completed successfully."
+            },
+            "imageScanFindingsSummary": {
+                "imageScanCompletedAt": "2023-10-19T10:54:01+00:00",
+                "vulnerabilitySourceUpdatedAt": "2023-10-18T18:20:37+00:00",
+                "findingSeverityCounts": {
+                    "HIGH": 4,
+                    "MEDIUM": 23,
+                    "INFORMATIONAL": 52,
+                    "LOW": 3,
+                    "UNDEFINED": 3
+                }
+            },
+            "imageManifestMediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "artifactMediaType": "application/vnd.docker.container.image.v1+json",
+            "lastRecordedPullTime": "2023-11-09T14:55:44.188000+00:00"
+        },
+        {
+            "registryId": "***",
+            "repositoryName": "test-ecr-repository",
+            "imageDigest": "sha256:446273e7f0a743e2f2fbc7e492d9181840a4397a83f6e2580a88d122623bedc1",
+            "imageTags": [
+                "latest"
+            ],
+            "imageSizeInBytes": 644383901,
+            "imagePushedAt": "2023-09-12T11:07:25+00:00",
+            "imageManifestMediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "artifactMediaType": "application/vnd.docker.container.image.v1+json"
+        },
+        {
+            "registryId": "***",
+            "repositoryName": "test-ecr-repository",
+            "imageDigest": "sha256:baf0ffe5d397ecce3cced9f5f8cd16836dace04b249f88ad7b970ab2ed27d966",
+            "imageTags": [
+                "api_a47f73119b705b4a60e2c4a8a37bb18054dbe8a8"
+            ],
+            "imageSizeInBytes": 644395945,
+            "imagePushedAt": "2023-11-16T14:13:50+00:00",
+            "imageManifestMediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "artifactMediaType": "application/vnd.docker.container.image.v1+json"
+        }
+    ]
+}
