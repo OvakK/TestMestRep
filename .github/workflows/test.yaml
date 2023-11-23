@@ -1,9 +1,9 @@
-name: Build infra
+# name: Build infra
 
-on:
-  push:
+# on:
+#   push:
 
-jobs:
+# jobs:
 
   # changes:
   #   runs-on: ubuntu-latest
@@ -38,14 +38,14 @@ jobs:
   #   steps:
   #   - name: Check out code
   #     run : echo "TEST2" 
-    aws:
-      runs-on: ubuntu-latest
-      steps:
-      - name: Check out code
-        uses: actions/checkout@v4
+    # aws:
+    #   runs-on: ubuntu-latest
+    #   steps:
+    #   - name: Check out code
+    #     uses: actions/checkout@v4
 
-      - name: AWS
-        run : |
-             latest_tag=$(jq -r '.imageDetails[0].imageTags[0]' aws.json)
-             export LATEST_IMAGE_TAG=$latest_tag
-             echo $LATEST_IMAGE_TAG
+    #   - name: AWS
+    #     run : |
+    #          latest_tag=$(jq -r '.imageDetails[0].imageTags[0]' aws.json)
+    #          export LATEST_IMAGE_TAG=$latest_tag
+    #          echo $LATEST_IMAGE_TAG
