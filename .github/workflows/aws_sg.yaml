@@ -26,8 +26,10 @@ jobs:
             --cidr ${{ steps.ip.outputs.ipv4 }}/32
       - name: connect to your rds instance and run tests
         run: |
-              sleep 100
+              npm i
+              
       - name: revoke runner ip address
+        if  : always()
         run: |
           aws ec2 revoke-security-group-ingress \
             --group-id $AWS_INSTANCE_SG_ID \
